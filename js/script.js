@@ -97,5 +97,9 @@ function tabChange(evt, tabName) {
 
 
 
+let count = 0;
 
-
+function buy() {
+    count++;
+    document.getElementById('count').innerHTML = (`${count}`);
+}

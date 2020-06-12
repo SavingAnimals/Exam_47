@@ -14,6 +14,7 @@
 
 <body>
 
+
     <header class="header">
 
         <div class="header__gradient">
@@ -33,7 +34,7 @@
 
                     <div class="header__login">LOGIN</div>
                     <div class="header__search"><span class="header__search-icon"></span> SEARCH</div>
-                    <div class="header__cart">CART</div>
+                    <div class="header__cart">CART (<span id="count">0</span>)</div>
 
                 </div>
 
@@ -151,7 +152,7 @@
                 </div>
                 <div class="products__buy">
                     <div class="products__price">$49.99 USD</div>
-                    <button class="products__buy-btn">Shop</button>
+                    <button onclick="buy(event)" class="products__buy-btn">Shop</button>
                 </div>
             </div>
 
@@ -163,7 +164,7 @@
                 </div>
                 <div class="products__buy">
                     <div class="products__price">$49.99 USD</div>
-                    <button class="products__buy-btn">Shop</button>
+                    <button onclick="buy(event)" class="products__buy-btn">Shop</button>
                 </div>
             </div>
 
@@ -175,7 +176,7 @@
                 </div>
                 <div class="products__buy">
                     <div class="products__price">$49.99 USD</div>
-                    <button class="products__buy-btn">Shop</button>
+                    <button onclick="buy(event)" class="products__buy-btn">Shop</button>
                 </div>
             </div>
 
@@ -187,7 +188,7 @@
                 </div>
                 <div class="products__buy">
                     <div class="products__price">$49.99 USD</div>
-                    <button class="products__buy-btn">Shop</button>
+                    <button onclick="buy(event)" class="products__buy-btn">Shop</button>
                 </div>
             </div>
 
@@ -199,7 +200,7 @@
                 </div>
                 <div class="products__buy">
                     <div class="products__price">$49.99 USD</div>
-                    <button class="products__buy-btn">Shop</button>
+                    <button onclick="buy(event)" class="products__buy-btn">Shop</button>
                 </div>
             </div>
 
@@ -211,7 +212,7 @@
                 </div>
                 <div class="products__buy">
                     <div class="products__price">$49.99 USD</div>
-                    <button class="products__buy-btn">Shop</button>
+                    <button onclick="buy(event)" class="products__buy-btn">Shop</button>
                 </div>
             </div>
 
@@ -315,11 +316,61 @@
                 </div>
             </div>
 
-
-
         </div>
 
     </div>
+
+
+    <footer class="footer">
+
+        <div class="mainer">
+            <div class="footer__content">
+                <div class="footer__aSide">
+                    <div class="footer__line"></div>
+                    <p class="footer__text">Privacy Policy <br>
+                        Terms of Use <br>
+                        Return Policy</p>
+                </div>
+                <div class="footer__subscribe">
+                    <div class="footer__logo">CBD</div>
+                    <div class="footer__social">
+                        <a href="" class="footer__link">
+                            <svg class="footer__icon">
+                                <use xlink:href="images/sprite.svg#icon-face"></use>
+                            </svg>
+                        </a>
+                        <a href="" class="footer__link">
+                            <svg class="footer__icon">
+                                <use xlink:href="images/sprite.svg#icon-twitt"></use>
+                            </svg>
+                        </a>
+                        <a href="" class="footer__link">
+                            <svg class="footer__icon">
+                                <use xlink:href="images/sprite.svg#icon-yt"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer__split"></div>
+                    <h3 class="footer__title">Subscribe to Newsletter</h3>
+                    <form action="" class="footer__form">
+                        <input class="footer__input" placeholder="Email" type="email" name="mail" id="mail" required>
+                        <button type="submit" class="footer__btn"></button>
+                    </form>
+                    <div class="footer__copyrights">© 2018. CbD health.</div>
+                </div>
+                <div class="footer__aSide">
+                    <div class="footer__line"></div>
+                    <p class="footer__text">SHIPPING INFO <br>
+                        RETURNS / EXCHANGES <br>
+                        CONTACT</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
 
 
     <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
