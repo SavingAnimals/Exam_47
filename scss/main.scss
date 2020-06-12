@@ -671,7 +671,7 @@ body {
         left: 50%;
         bottom: 35px;
         transform: translateX(-70px);
-        transition-duration: 0.4s;
+        transition-duration: 0.3s;
         &:hover {
             transform: scale(1.1) translateX(-64px);
         }
@@ -688,7 +688,7 @@ body {
         left: 50%;
         bottom: 35px;
         transform: translateX(30px) rotateY(180deg);
-        transition-duration: 0.4s;
+        transition-duration: 0.3s;
         &:hover {
             transform: translateX(30px) rotateY(180deg) scale(1.1);
         }

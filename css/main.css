@@ -755,6 +755,8 @@ body {
   bottom: 35px;
   -webkit-transform: translateX(-70px);
           transform: translateX(-70px);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .products__arrow-left:hover {
@@ -775,6 +777,8 @@ body {
   bottom: 35px;
   -webkit-transform: translateX(30px) rotateY(180deg);
           transform: translateX(30px) rotateY(180deg);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .products__arrow-right:hover {
