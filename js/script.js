@@ -97,6 +97,14 @@ function tabChange(evt, tabName) {
 
 
 
+$("#navMenu .header__menu-link").click(function () {
+    $('.header__menu-link').removeClass('selected');
+    $(this).addClass("selected");
+});
+
+
+
+
 let count = 0;
 
 function buy() {

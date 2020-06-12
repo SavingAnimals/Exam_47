@@ -90,6 +90,38 @@ body {
         font-family: "Oswald", sans-serif;
         outline: none;
         margin: 0 0 0 50px;
+        position: relative;
+        transition-duration: 0.4s;
+        &.selected {
+            &::before {
+                content: "";
+                width: 150%;
+                height: 2px;
+                display: block;
+                background-color: rgb(157, 184, 146);
+                position: absolute;
+                top: 49%;
+                left: -25%;
+                transition-duration: 0.4s;
+            }
+        }
+        &:hover {
+            &::before {
+                width: 150%;
+            }
+        }
+
+        &::before {
+            content: "";
+            width: 0px;
+            height: 2px;
+            display: block;
+            background-color: rgb(157, 184, 146);
+            position: absolute;
+            top: 49%;
+            left: -25%;
+            transition-duration: 0.4s;
+        }
     }
 
     &__logo {

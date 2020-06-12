@@ -77,6 +77,39 @@ body {
   font-family: "Oswald", sans-serif;
   outline: none;
   margin: 0 0 0 50px;
+  position: relative;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.header__menu-link.selected::before {
+  content: "";
+  width: 150%;
+  height: 2px;
+  display: block;
+  background-color: #9db892;
+  position: absolute;
+  top: 49%;
+  left: -25%;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.header__menu-link:hover::before {
+  width: 150%;
+}
+
+.header__menu-link::before {
+  content: "";
+  width: 0px;
+  height: 2px;
+  display: block;
+  background-color: #9db892;
+  position: absolute;
+  top: 49%;
+  left: -25%;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
 .header__logo {
