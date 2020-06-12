@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+
+
+    $(".header__search").click(function () {
+        $(".header__search-field").toggleClass("show");
+    });
+    $(".header__search").click(function () {
+        $(".header__search-btn").toggleClass("btn-show");
+    });
+
     $(function () {
         $(window).scroll(function () {
             if ($(this).scrollTop() > 50) {

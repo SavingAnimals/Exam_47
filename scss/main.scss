@@ -57,7 +57,7 @@ body {
         align-items: center;
         background-color: rgba(255, 255, 255, 0);
         border-bottom: 1px solid rgb(204, 210, 216);
-        transition-duration: 0.8s;
+
         z-index: 200;
     }
     .change-Bg {
@@ -127,20 +127,81 @@ body {
     &__logo {
         flex-grow: 1;
         text-align: center;
-
         font-family: "Oswald", sans-serif;
         font-size: 30px;
-        padding: 0 2% 0 0;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        &:hover {
+            color: rgb(157, 184, 146);
+        }
     }
 
     &__user-menu {
         height: 100%;
         display: flex;
-        max-width: 500px;
+        max-width: 640px;
         align-items: center;
         justify-content: flex-end;
         font-size: 16px;
         font-family: "Oswald", sans-serif;
+    }
+    &__search-form {
+        position: relative;
+        overflow: hidden;
+    }
+    &__search-field {
+        width: 0px;
+        height: 40px;
+        background-color: transparent;
+        transition-duration: 1s;
+        padding-left: 15px;
+        border: 2px solid rgba(172, 175, 160, 0);
+        outline: none;
+        color: black;
+        font-family: "Oswald", sans-serif;
+        font-size: 16px;
+        &::placeholder {
+            color: black;
+            font-size: 16px;
+            font-family: "Oswald", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        &:focus {
+            border: 2px solid rgb(168, 184, 107);
+        }
+    }
+    &__search-btn {
+        width: 0px;
+        height: 46px;
+        display: block;
+        position: absolute;
+        font-size: 16px;
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: white;
+        top: 0;
+        right: 0;
+        border: none;
+        background-color: rgb(157, 184, 146);
+        opacity: 0;
+        transition-duration: 0.6s;
+        outline: none;
+        cursor: pointer;
+        &:hover {
+            background-color: rgb(157, 219, 133);
+        }
+    }
+    .btn-show {
+        width: 50px;
+        height: 46px;
+        opacity: 1;
+    }
+    .show {
+        width: 240px;
+        height: 40px;
+        background-color: rgb(202, 202, 202);
     }
 
     &__login {
@@ -148,15 +209,28 @@ body {
         border-left: 1px solid rgb(204, 210, 216);
         line-height: 80px;
         cursor: pointer;
+        transition-duration: 0.4s;
+        &:hover {
+            color: rgb(157, 184, 146);
+        }
     }
     &__search {
         display: flex;
         align-items: center;
-        padding: 0 35px;
+        padding: 0 25px 0 35px;
         border-left: 1px solid rgb(204, 210, 216);
         line-height: 80px;
         cursor: pointer;
-        span {
+        transition-duration: 0.4s;
+        &:hover {
+            color: rgb(157, 184, 146);
+            .header__search-icon {
+                background-color: rgb(157, 184, 146);
+                -webkit-mask: url(../images/search-icon.svg) no-repeat 50% 50%;
+                mask: url(../images/search-icon.svg) no-repeat 50% 50%;
+            }
+        }
+        .header__search-icon {
             background-color: white;
             -webkit-mask: url(../images/search-icon.svg) no-repeat 50% 50%;
             mask: url(../images/search-icon.svg) no-repeat 50% 50%;
@@ -164,7 +238,7 @@ body {
             height: 20px;
             display: inline-block;
             padding-right: 10px;
-            transition-duration: 0.8s;
+            transition-duration: 0.4s;
         }
     }
 
@@ -173,6 +247,10 @@ body {
         border-left: 1px solid rgb(204, 210, 216);
         line-height: 80px;
         cursor: pointer;
+        transition-duration: 0.4s;
+        &:hover {
+            color: rgb(157, 184, 146);
+        }
     }
 
     &__intro {
@@ -930,11 +1008,4 @@ body {
             }
         }
     }
-}
-
-__icon {
-    height: 22px;
-    width: 22px;
-    margin: 0 30px;
-    fill: rgb(110, 119, 74);
 }

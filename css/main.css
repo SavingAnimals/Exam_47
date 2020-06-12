@@ -39,8 +39,6 @@ body {
           align-items: center;
   background-color: rgba(255, 255, 255, 0);
   border-bottom: 1px solid #ccd2d8;
-  -webkit-transition-duration: 0.8s;
-          transition-duration: 0.8s;
   z-index: 200;
 }
 
@@ -119,7 +117,13 @@ body {
   text-align: center;
   font-family: "Oswald", sans-serif;
   font-size: 30px;
-  padding: 0 2% 0 0;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.header__logo:hover {
+  color: #9db892;
 }
 
 .header__user-menu {
@@ -127,7 +131,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 500px;
+  max-width: 640px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -138,11 +142,109 @@ body {
   font-family: "Oswald", sans-serif;
 }
 
+.header__search-form {
+  position: relative;
+  overflow: hidden;
+}
+
+.header__search-field {
+  width: 0px;
+  height: 40px;
+  background-color: transparent;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  padding-left: 15px;
+  border: 2px solid rgba(172, 175, 160, 0);
+  outline: none;
+  color: black;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+}
+
+.header__search-field::-webkit-input-placeholder {
+  color: black;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.header__search-field:-ms-input-placeholder {
+  color: black;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.header__search-field::-ms-input-placeholder {
+  color: black;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.header__search-field::placeholder {
+  color: black;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.header__search-field:focus {
+  border: 2px solid #a8b86b;
+}
+
+.header__search-btn {
+  width: 0px;
+  height: 46px;
+  display: block;
+  position: absolute;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: white;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: #9db892;
+  opacity: 0;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  outline: none;
+  cursor: pointer;
+}
+
+.header__search-btn:hover {
+  background-color: #9ddb85;
+}
+
+.header .btn-show {
+  width: 50px;
+  height: 46px;
+  opacity: 1;
+}
+
+.header .show {
+  width: 240px;
+  height: 40px;
+  background-color: #cacaca;
+}
+
 .header__login {
   padding: 0 35px;
   border-left: 1px solid #ccd2d8;
   line-height: 80px;
   cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.header__login:hover {
+  color: #9db892;
 }
 
 .header__search {
@@ -152,13 +254,25 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 35px;
+  padding: 0 25px 0 35px;
   border-left: 1px solid #ccd2d8;
   line-height: 80px;
   cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
-.header__search span {
+.header__search:hover {
+  color: #9db892;
+}
+
+.header__search:hover .header__search-icon {
+  background-color: #9db892;
+  -webkit-mask: url(../images/search-icon.svg) no-repeat 50% 50%;
+  mask: url(../images/search-icon.svg) no-repeat 50% 50%;
+}
+
+.header__search .header__search-icon {
   background-color: white;
   -webkit-mask: url(../images/search-icon.svg) no-repeat 50% 50%;
   mask: url(../images/search-icon.svg) no-repeat 50% 50%;
@@ -166,8 +280,8 @@ body {
   height: 20px;
   display: inline-block;
   padding-right: 10px;
-  -webkit-transition-duration: 0.8s;
-          transition-duration: 0.8s;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
 .header__cart {
@@ -175,6 +289,12 @@ body {
   border-left: 1px solid #ccd2d8;
   line-height: 80px;
   cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.header__cart:hover {
+  color: #9db892;
 }
 
 .header__intro {
@@ -1026,12 +1146,5 @@ body {
 
 .footer__link:hover .footer__icon {
   fill: #b3d13c;
-}
-
-__icon {
-  height: 22px;
-  width: 22px;
-  margin: 0 30px;
-  fill: #6e774a;
 }
 /*# sourceMappingURL=main.css.map */
