@@ -28,9 +28,9 @@ $(document).ready(function () {
     $('.products__carousel').slick({
         dots: false,
         infinite: true,
-        speed: 300,
+        speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         prevArrow: "<button class='products__arrow-left prev'></button>",
         nextArrow: "<button class='products__arrow-right next'></button>",
         responsive: [
@@ -64,9 +64,9 @@ $(document).ready(function () {
     $('.testimonials__carousel').slick({
         dots: false,
         infinite: true,
-        speed: 500,
+        speed: 700,
         fade: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 3500,
         cssEase: 'linear',
         prevArrow: "<button class='testimonials__arrow-left prev'></button>",
