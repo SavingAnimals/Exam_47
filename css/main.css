@@ -51,6 +51,14 @@ body {
   color: black;
 }
 
+.header .change-Bg .header__logo {
+  color: black;
+}
+
+.header .change-Bg .header__menu-link {
+  color: black;
+}
+
 .header .change-Bg .header__search-icon {
   background-color: black;
 }
@@ -74,7 +82,9 @@ body {
   cursor: pointer;
   font-family: "Oswald", sans-serif;
   outline: none;
+  text-decoration: none;
   margin: 0 0 0 50px;
+  color: white;
   position: relative;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
@@ -111,12 +121,13 @@ body {
 }
 
 .header__logo {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  width: 60px;
+  margin: 0 auto;
   text-align: center;
   font-family: "Oswald", sans-serif;
   font-size: 30px;
+  color: white;
+  text-decoration: none;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
   cursor: pointer;
@@ -325,13 +336,14 @@ body {
   width: 270px;
   background-color: transparent;
   border: 1px solid #ccd2d8;
-  font-size: 20px;
-  color: white;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   outline: none;
   cursor: pointer;
-  padding: 0 100px 0 40px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
   position: relative;
   margin-bottom: 25px;
 }
@@ -351,6 +363,15 @@ body {
   right: 40px;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+}
+
+.header__btn-link {
+  display: block;
+  padding: 0 100px 0 40px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  line-height: 68px;
 }
 
 .header__products {
@@ -378,8 +399,9 @@ body {
 .header__scroll-btn {
   background-image: url(../images/scroll.svg);
   background-repeat: no-repeat;
+  background-position: center;
   width: 30px;
-  height: 40px;
+  height: 60px;
   position: absolute;
   bottom: 60px;
   left: 50%;
@@ -453,10 +475,6 @@ body {
   padding: 100px 0 75px 0;
   overflow: hidden;
   /* Style the buttons inside the tab */
-  /* Change background color of buttons on hover */
-  /* Create an active/current tablink class */
-  /* Style the tab content */
-  /* Fade in tabs */
 }
 
 .about__we-are {
@@ -739,6 +757,11 @@ body {
           transform: translateX(-70px);
 }
 
+.products__arrow-left:hover {
+  -webkit-transform: scale(1.1) translateX(-64px);
+          transform: scale(1.1) translateX(-64px);
+}
+
 .products__arrow-right {
   width: 40px;
   height: 20px;
@@ -752,6 +775,11 @@ body {
   bottom: 35px;
   -webkit-transform: translateX(30px) rotateY(180deg);
           transform: translateX(30px) rotateY(180deg);
+}
+
+.products__arrow-right:hover {
+  -webkit-transform: translateX(30px) rotateY(180deg) scale(1.1);
+          transform: translateX(30px) rotateY(180deg) scale(1.1);
 }
 
 .questions {

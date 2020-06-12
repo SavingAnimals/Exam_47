@@ -15,20 +15,20 @@
 <body>
 
 
-    <header class="header">
+    <header id="home" class="header">
 
         <div class="header__gradient">
 
             <div class="header__nav">
 
                 <div id="navMenu" class="header__menu">
-                    <a class="header__menu-link selected">HOME</a>
-                    <a class="header__menu-link">PRODUCTS</a>
-                    <a class="header__menu-link">FAQS</a>
-                    <a class="header__menu-link">CONTACT US</a>
+                    <a href="#home" class="header__menu-link selected">HOME</a>
+                    <a href="#products" class="header__menu-link">PRODUCTS</a>
+                    <a href="#faqs" class="header__menu-link">FAQS</a>
+                    <a href="#contact" class="header__menu-link">CONTACT US</a>
                 </div>
 
-                <a class="header__logo">CBD</a>
+                <a href="#home" class="header__logo">CBD</a>
 
                 <div class="header__user-menu">
 
@@ -51,20 +51,19 @@
                     <h1 class="header__title">Enhancing Life <br>
                         Excelling in Care</h1>
                     <div class="header__sub-title">Choose Wisely. Choose CBD.</div>
-                    <button class="header__btn">Start Shopping</button>
-                    <a href="javascript:void(0);" class="header__products">See all products <span
-                            class="arrow"></span></a>
+                    <button class="header__btn"><a class="header__btn-link" href="#products">Start Shopping</a></button>
+                    <a href="#products" class="header__products">See all products <span class="arrow"></span></a>
 
                 </div>
             </div>
         </div>
 
-        <div class="header__scroll-btn"></div>
+        <a href="#about" class="header__scroll-btn"></a>
         <div class="header__position"><span class="header__position--line"></span> CBD Potion health</div>
 
     </header>
 
-    <div class="about">
+    <div id="about" class="about">
 
         <div class="mainer">
 
@@ -145,7 +144,7 @@
         </div>
     </div>
 
-    <div class="products">
+    <div id="products" class="products">
         <div class="products__title">CBD Featured Products</div>
 
         <div class="products__carousel">
@@ -228,7 +227,7 @@
 
     </div>
 
-    <div class="questions">
+    <div id="faqs" class="questions">
         <div class="questions__title">Frequently asked questions</div>
 
         <div class="questions__accordeon">
@@ -327,7 +326,7 @@
     </div>
 
 
-    <footer class="footer">
+    <footer id="contact" class="footer">
 
         <div class="mainer">
             <div class="footer__content">
