@@ -207,10 +207,6 @@ body {
     padding: 0 15px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 
@@ -243,6 +239,12 @@ body {
   color: black;
   font-family: "Oswald", sans-serif;
   font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .header__search-field {
+    display: none;
+  }
 }
 
 .header__search-field::-webkit-input-placeholder {

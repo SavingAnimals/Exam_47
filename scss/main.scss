@@ -182,7 +182,6 @@ body {
             min-width: 300px;
             padding: 0 15px;
             box-sizing: border-box;
-            flex-direction: column;
         }
     }
     &__search-form {
@@ -206,6 +205,9 @@ body {
         color: black;
         font-family: "Oswald", sans-serif;
         font-size: 18px;
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
 
         &::placeholder {
             color: black;
