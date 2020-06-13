@@ -51,8 +51,9 @@ body {
     &__nav {
         display: flex;
         position: fixed;
+        flex-wrap: wrap;
         width: 100%;
-        height: 80px;
+        min-height: 80px;
         color: white;
         align-items: center;
         background-color: rgba(255, 255, 255, 0);
@@ -84,9 +85,13 @@ body {
         display: flex;
         font-family: "Oswald", sans-serif;
         font-size: 16px;
-        max-width: 500px;
+        max-width: 410px;
+        width: 100%;
         align-items: center;
         padding: 0 0 0 10px;
+        @media screen and (max-width: 888px) {
+            justify-content: space-between;
+        }
     }
 
     &__menu-link {
@@ -99,6 +104,13 @@ body {
         color: white;
         position: relative;
         transition-duration: 0.4s;
+        @media screen and (max-width: 888px) {
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 375px) {
+            line-height: 40px;
+            margin: 0 auto;
+        }
         &.selected {
             &::before {
                 content: "";
@@ -154,10 +166,31 @@ body {
         justify-content: flex-end;
         font-size: 16px;
         font-family: "Oswald", sans-serif;
+        @media screen and (max-width: 888px) {
+            margin: 0 auto;
+            justify-content: space-around;
+            min-width: 300px;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+        @media screen and (max-width: 375px) {
+            margin: 0 auto;
+            justify-content: space-around;
+            min-width: 300px;
+            padding: 0 15px;
+            box-sizing: border-box;
+            flex-direction: column;
+        }
     }
     &__search-form {
         position: relative;
         overflow: hidden;
+        @media screen and (max-width: 888px) {
+            margin: 0 15px 0 0;
+        }
+        @media screen and (max-width: 375px) {
+            margin: 0 0 0 0;
+        }
     }
     &__search-field {
         width: 0px;
@@ -170,6 +203,7 @@ body {
         color: black;
         font-family: "Oswald", sans-serif;
         font-size: 18px;
+
         &::placeholder {
             color: black;
             font-size: 16px;
@@ -223,6 +257,16 @@ body {
         &:hover {
             color: rgb(157, 184, 146);
         }
+        @media screen and (max-width: 888px) {
+            border: none;
+            padding: 0;
+            margin: 0 20px 0 0;
+        }
+        @media screen and (max-width: 375px) {
+            margin: 0 auto;
+            height: 30px;
+            line-height: 30px;
+        }
     }
     &__search {
         display: flex;
@@ -232,6 +276,16 @@ body {
         line-height: 80px;
         cursor: pointer;
         transition-duration: 0.4s;
+        @media screen and (max-width: 888px) {
+            border: none;
+            padding: 0;
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 375px) {
+            margin: 0 auto;
+            height: 30px;
+            line-height: 30px;
+        }
         &:hover {
             color: rgb(157, 184, 146);
             .header__search-icon {
@@ -258,6 +312,15 @@ body {
         line-height: 80px;
         cursor: pointer;
         transition-duration: 0.4s;
+        @media screen and (max-width: 888px) {
+            border: none;
+            padding: 0;
+        }
+        @media screen and (max-width: 375px) {
+            margin: 0 auto;
+            height: 30px;
+            line-height: 30px;
+        }
         &:hover {
             color: rgb(157, 184, 146);
         }
@@ -268,6 +331,10 @@ body {
         text-align: right;
 
         color: white;
+        @media screen and (max-width: 888px) {
+            text-align: center;
+            padding: 250px 0 0 0;
+        }
     }
 
     &__title {
@@ -277,6 +344,10 @@ body {
         text-transform: uppercase;
         letter-spacing: 16px;
         margin: 0px -15px 17px 0;
+        @media screen and (max-width: 600px) {
+            font-size: 35px;
+            line-height: 60px;
+        }
     }
 
     &__sub-title {
@@ -285,6 +356,9 @@ body {
         font-size: 24px;
         letter-spacing: 10px;
         margin: 0 -9px 55px 0;
+        @media screen and (max-width: 600px) {
+            font-size: 18px;
+        }
     }
 
     &__btn {
@@ -332,6 +406,7 @@ body {
 
     &__products {
         display: block;
+        // width: 300px;
         font-size: 18px;
         font-weight: 300;
         color: white;
@@ -339,6 +414,12 @@ body {
         letter-spacing: 6px;
         position: relative;
         padding: 0 35px 0 0;
+        @media screen and (max-width: 888px) {
+            font-size: 18px;
+            line-height: 30px;
+            width: 220px;
+            margin: 0 auto;
+        }
 
         .arrow {
             background-image: url(../images/Arrow-right.svg);
@@ -405,6 +486,9 @@ body {
         left: -120px;
         letter-spacing: 2px;
         transform: rotateZ(-90deg);
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
 
         &--line {
             display: block;
@@ -421,16 +505,22 @@ body {
     width: 100%;
     padding: 100px 0 75px 0;
     overflow: hidden;
+    @media screen and (max-width: 600px) {
+        padding: 50px 0 35px 0;
+    }
     &__we-are {
         border: 30px solid transparent;
         padding: 10px 10px 10px 10px;
         border-image: url(../images/holder.png) 30 stretch;
-
         box-sizing: border-box;
         max-width: 690px;
         height: 200px;
         margin: 0 auto 100px auto;
         text-align: center;
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            margin: 0 auto 30px auto;
+        }
     }
 
     &__main-title {
@@ -439,6 +529,9 @@ body {
         text-transform: uppercase;
         letter-spacing: 6px;
         margin: 0 0 23px 0;
+        @media screen and (max-width: 600px) {
+            font-size: 18px;
+        }
     }
 
     &__logos {
@@ -448,7 +541,7 @@ body {
         height: auto;
         margin: 0 auto;
     }
-    /* Style the buttons inside the tab */
+
     &__tab {
         display: flex;
         align-items: center;
@@ -458,9 +551,16 @@ body {
         padding-right: 130px;
         height: 70px;
         box-sizing: border-box;
-
         margin-left: 100px;
         border-bottom: 2px solid rgb(206, 214, 175);
+        @media screen and (max-width: 888px) {
+            margin-left: 0;
+            padding: 0;
+            border: none;
+        }
+        @media screen and (max-width: 700px) {
+            flex-direction: column;
+        }
     }
 
     &__tablinks {
@@ -475,6 +575,10 @@ body {
         font-size: 30px;
         color: rgb(28, 28, 27);
         position: relative;
+        @media screen and (max-width: 888px) {
+            font-size: 16px;
+            margin: 10px 10px;
+        }
 
         &::before {
             content: " ";
@@ -512,6 +616,9 @@ body {
         padding: 80px 0 0 0;
         -webkit-animation: fadeEffect 1s;
         animation: fadeEffect 2s;
+        @media screen and (max-width: 888px) {
+            margin-left: 0px;
+        }
     }
 
     @-webkit-keyframes fadeEffect {
@@ -533,10 +640,19 @@ body {
     }
     &__description {
         max-width: 400px;
+        @media screen and (max-width: 888px) {
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 600px) {
+            text-align: center;
+        }
     }
     &__gallery {
         display: flex;
         flex-direction: column;
+        @media screen and (max-width: 888px) {
+            display: none;
+        }
     }
     &__img {
         width: 100%;
@@ -548,6 +664,9 @@ body {
         font-size: 24px;
         letter-spacing: 8px;
         margin-bottom: 30px;
+        @media screen and (max-width: 600px) {
+            font-size: 18px;
+        }
     }
 
     &__text {
@@ -565,6 +684,9 @@ body {
     text-align: center;
     background-color: rgb(241, 241, 241);
     overflow: hidden;
+    @media screen and (max-width: 600px) {
+        padding: 25px 0 0px 0;
+    }
 
     &__carousel {
         margin: 0 -20px;
@@ -618,6 +740,10 @@ body {
         height: 75px;
         border-bottom: 1px solid rgb(197, 197, 197);
         border-left: 1px solid rgb(197, 197, 197);
+        @media screen and (max-width: 600px) {
+            padding: 0 0 0 15px;
+            height: 50px;
+        }
     }
 
     &__price {
@@ -640,6 +766,10 @@ body {
         position: relative;
         outline: none;
         cursor: pointer;
+        @media screen and (max-width: 600px) {
+            height: 54px;
+        }
+
         &:hover {
             &::before {
                 width: 150px;
@@ -699,6 +829,9 @@ body {
     background-color: rgb(241, 241, 241);
     width: 100%;
     padding: 105px 0 150px 0;
+    @media screen and (max-width: 600px) {
+        padding: 30px 0 30px 0;
+    }
 
     &__title {
         font-size: 30px;
@@ -707,6 +840,11 @@ body {
         letter-spacing: 6px;
         text-align: center;
         margin-bottom: 45px;
+        @media screen and (max-width: 600px) {
+            padding: 0 15px;
+            box-sizing: border-box;
+            font-size: 18px;
+        }
     }
 
     &__accordeon {
@@ -736,6 +874,9 @@ body {
                 opacity: 0;
             }
         }
+        @media screen and (max-width: 600px) {
+            text-align: center;
+        }
     }
     &__accordion-cell:after {
         content: "";
@@ -745,6 +886,9 @@ body {
         top: 50%;
         left: 5px;
         position: absolute;
+        @media screen and (max-width: 600px) {
+            left: 10px;
+        }
     }
     &__accordion-cell::before {
         content: " ";
@@ -756,6 +900,9 @@ body {
         position: absolute;
         opacity: 1;
         transition-duration: 0.5s;
+        @media screen and (max-width: 600px) {
+            left: 20px;
+        }
     }
 
     &__accordion-cell:hover {
@@ -766,12 +913,17 @@ body {
         background-color: rgb(241, 241, 241);
         max-height: 0;
         overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+    &__text {
+        letter-spacing: 1px;
         font-size: 18px;
         color: black;
         font-weight: 300;
         font-family: "Oswald", sans-serif;
-        transition: max-height 0.3s ease-out;
-        letter-spacing: 1px;
+        @media screen and (max-width: 600px) {
+            text-align: center;
+        }
     }
 }
 
@@ -826,7 +978,8 @@ body {
 
     &__bg1 {
         background-image: url(../images/testimonials-bg.jpg);
-        height: 800px;
+        max-height: 800px;
+        height: 100%;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -835,7 +988,8 @@ body {
     }
     &__bg2 {
         background-image: url(../images/bg2.jpg);
-        height: 800px;
+        max-height: 800px;
+        height: 100%;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -844,7 +998,8 @@ body {
     }
     &__bg3 {
         background-image: url(../images/bg3.jpg);
-        height: 800px;
+        max-height: 800px;
+        height: 100%;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -853,7 +1008,8 @@ body {
     }
     &__bg4 {
         background-image: url(../images/bg4.jpg);
-        height: 800px;
+        max-height: 800px;
+        height: 100%;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -869,6 +1025,10 @@ body {
         background: linear-gradient(to bottom, rgba(28, 32, 11, 0.65) 0%, rgba(28, 32, 11, 0.65) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a61c200b', endColorstr='#a61c200b',GradientType=0 );
         padding: 265px 25px 265px 25px;
+        @media screen and (max-width: 600px) {
+            padding: 50px 25px 50px 25px;
+            height: 500px;
+        }
     }
 
     &__frame {
@@ -920,6 +1080,9 @@ body {
         display: flex;
         justify-content: space-between;
         padding: 150px 0 55px 0;
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+        }
     }
     &__aSide {
         text-align: center;
@@ -932,6 +1095,9 @@ body {
         letter-spacing: 4px;
         line-height: 40px;
         padding: 50px 0 0 0;
+        @media screen and (max-width: 600px) {
+            margin: 0 auto;
+        }
     }
     &__line {
         width: 100%;
