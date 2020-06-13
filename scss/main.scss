@@ -173,7 +173,7 @@ body {
             padding: 0 15px;
             box-sizing: border-box;
         }
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 500px) {
             margin: 0 auto;
             justify-content: space-around;
             min-width: 300px;
@@ -260,7 +260,7 @@ body {
         @media screen and (max-width: 888px) {
             border: none;
             padding: 0;
-            margin: 0 auto;
+            margin: 0 20px 0 0;
         }
         @media screen and (max-width: 375px) {
             margin: 0 auto;

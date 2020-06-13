@@ -189,7 +189,7 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .header__user-menu {
     margin: 0 auto;
     -ms-flex-pack: distribute;
@@ -326,7 +326,7 @@ body {
   .header__login {
     border: none;
     padding: 0;
-    margin: 0 auto;
+    margin: 0 20px 0 0;
   }
 }
 
